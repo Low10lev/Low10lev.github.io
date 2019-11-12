@@ -5,27 +5,29 @@
 </script>
     <title>C2FCoverter-LeviLoera</title>
   </head>
-  <body>
-      <h1 style = "text-align: center;">
+  <body style = "background-color: #00CC00;">
+      <h1 style = "color: #FFFF33; text-align: center;">
         <strong>
           Welcome to the Temperature<br> Converter Program
         <strong>
        </h1>
       <p>
-        <h3 style = "text-align: center;">
+        <h3 style = "color: #FFFF33; text-align: center;">
         <strong>
             By Levi Loera
         </strong>
         </h3>
       </p>
       <hr>
-    <script>
-      var sEntry = window.prompt( "Enter a temperature in Celsius", "0" );
-      var nNum = parseInt(sEntry);
-      var nMath = nNum * 1.8 + 32;
-      document.write("<h2>" + nNum + " Celsius equals " + nMath +" Fahrenheit.</h2>");
+      <script>
+      var sEntry, nNum, nMath, sDis;
+      sEntry = window.prompt( "Enter a temperature in Celsius", "0" );
+      nNum = parseInt(sEntry);
+      nMath = nNum * 1.8 + 32;
+      sDis = new String("<h2><center>" + nNum + " Celsius equals " + nMath +" Fahrenheit.</h2></center>" );
+      document.write((sDis.fontcolor("Yellow")).fontsize(3));
     </script>
-    <h3 style = "text-align: center;">
+    <h3 style = "color: #FFFF33; text-align: center;">
        <strong>
          Reload page for another conversion.
        <strong>
