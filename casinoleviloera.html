@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+</script>
+    <title>Casino-LeviLoera</title>
+  </head>
+  <body style = "background-color: #00FFFF;">
+      <script>
+
+      
+      	var sSen, sEnt, nQua1=0, nQua2=0, nQua3=0, nQua4=0, nMat1=0, nMat2=0 , nMat3=0 , nMat4=0, nTot = 0;
+        sSen = new String("<center> Imperial Pacific Casino</center>");
+      	document.write((sSen.fontcolor("Yellow")).fontsize(8));
+        sSen = new String("<center>Levi Loera</center>");
+      	document.write((sSen.fontcolor("Yellow")).fontsize(6));
+        sSen = new String("<center>Price of Chips</center>");
+      	document.write((sSen.fontcolor("White")).fontsize(6));
+        sSen = new String("<center>Black = $5</center>");
+      	document.write((sSen.fontcolor("Black")).fontsize(5));
+        sSen = new String("<center>Blue = $20</center>");
+      	document.write((sSen.fontcolor("Blue")).fontsize(5));
+        sSen = new String("<center>Red = $50</center>");
+      	document.write((sSen.fontcolor("Red")).fontsize(5));
+        sSen = new String("<center>Green = $100</center>");
+      	document.write((sSen.fontcolor("Green")).fontsize(5));
+        
+        sEnt = window.prompt( "How many BLACK chips would you like to purchase?","0");
+        nQua1 = parseInt(sEnt);
+        nMat1 = nQua1 * 5;
+        sEnt = window.prompt( "How many BLUE chips would you like to purchase?", "0");
+        nQua2 = parseInt(sEnt);
+        nMat2 = nQua2 * 20;
+        sEnt = window.prompt( "How many RED chips would you like to purchase?", "0" );
+        nQua3 = parseInt(sEnt);
+        nMat3 = nQua3 * 50;
+        sEnt = window.prompt( "How many GREEN chips would you like to purchase?","0");
+        nQua4 = parseInt(sEnt);
+        nMat4 = nQua4 * 100;
+        
+        nTot= nMat1 + nMat2 + nMat3 + nMat4;
+        
+        
+        sSen = new String("<center>Your total is $" + nTot + "</center>");
+      	document.write((sSen.fontcolor("Black")).fontsize(6));
+        
+         sSen = new String("<center>"+ nQuan1 + " Black = " + nMat1 + "</center>");
+         document.write((sSen.fontcolor("Black")).fontsize(5));
+         sSen = new String("<center>"+ nQuan2 + " Black = " + nMat2 + "</center>");
+         document.write((sSen.fontcolor("Blue")).fontsize(5));
+         sSen = new String("<center>"+ nQuan3 + " Black = " + nMat3 + "</center>");
+         document.write((sSen.fontcolor("Red")).fontsize(5));
+         sSen = new String("<center>"+ nQuan4 + " Black = " + nMat4 + "</center>");
+         document.write((sSen.fontcolor("Green")).fontsize(5));
+
+      </script>
+ </body>
+</html>
