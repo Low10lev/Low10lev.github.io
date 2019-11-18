@@ -1,4 +1,5 @@
-<!--This program displays a webpage with a promt on enering the amount of Celsius to be converted to Fahrenheit and displays it.-->
+<!--This program displays a webpage with a promt on entering the amount of either
+Celsius or Fahrenheit to be converted between each other and displays it.-->
 
 
 <!DOCTYPE html>
@@ -8,10 +9,10 @@
 </script>
     <title>C2FCoverter-LeviLoera</title>
   </head>
-  <body style = "background-color: #00CC00;">
+  <body style = "background-color: #0000ff;">
       <h1 style = "color: #FFFF33; text-align: center;">
         <strong>
-          Welcome to the Temperature<br> Converter Program
+          Welcome to the Temperature<br> Conversion Program
         <strong>
        </h1>
       <p>
@@ -24,11 +25,21 @@
       <hr>
       <script>
       var sEntry, nNum, nMath, sDis;
-      sEntry = window.prompt( "Enter a temperature in Celsius", "0" );
-      nNum = parseInt(sEntry);
-      nMath = nNum * 1.8 + 32;
-      sDis = new String("<h2><center>" + nNum + " Celsius equals " + nMath +" Fahrenheit.</h2></center>" );
-      document.write((sDis.fontcolor("Yellow")).fontsize(3));
+      sEntry = window.prompt( "Is the input in Celsius or Fahrenheit?(Input c for Celsius and f for Fahrenheit)", "c" );
+      if(sEntry == "c")
+      {
+      	nNum = parseFloat(window.prompt("Enter the degrees: ", "0"));
+        nMath = nNum * 1.8 + 32;
+        sDis = new String("<h2><center>" + nNum + " Celsius equals " + nMath +" 			Fahrenheit.</h2></center>" );
+        document.write((sDis.fontcolor("Yellow")).fontsize(3));
+      }
+      else
+      {
+      	nNum = parseFloat(window.prompt("Enter the degrees: ", "0"));
+        nMath = (nNum - 32) * 1.8 ;
+        sDis = new String("<h2><center>" + nNum + " Fahrenheit equals " + nMath +" 			Celsius .</h2></center>" );
+        document.write((sDis.fontcolor("Yellow")).fontsize(3));
+      }
     </script>
     <h3 style = "color: #FFFF33; text-align: center;">
        <strong>
