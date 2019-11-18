@@ -1,4 +1,8 @@
-<!--This program displays a webpage with a promt on entering the user's name, social security number, pay rate, and total hours worked to display a pay check with the name, social security number, pay rate, total hours worked, gross pay, net pay, and tax withheld depending on the number of hours worked being greater than 40 and gross pay being greater than 1000.-->
+<!--This program displays a webpage with a promt on entering the user's name,
+social security number, pay rate, and total hours worked to display a pay check
+with the name, social security number, pay rate, total hours worked, gross pay,
+net pay, and tax withheld depending on the number of hours worked being greater 
+than 40 and gross pay being greater than 1000.-->
 
 
 <!DOCTYPE html>
@@ -20,7 +24,7 @@
       sNam = parseFloat(window.prompt( " What is your name?", "a" ));
       nSsn = parseInt(window.prompt("What is your Social Security number?","0"));
       nPay = parseInt(window.prompt("What is your pay rate in $ per hours?","0"));
-      nHou = parseInt(window.prompt("How many total hours did you work this 			  week?","0"));
+      nHou = parseInt(window.prompt("How many total hours did you work this week?","0"));
       if( nHou > "40")
       {
       	nGro = 40 * nPay + (nHou - 40) * 1.5 * nPay;
@@ -69,4 +73,5 @@
     
   </body>
 </html>
+
 
