@@ -1,1 +1,72 @@
+<!--This program displays a webpage with a promt on entering the user's name, social security number, pay rate, and total hours worked to display a pay check with the name, social security number, pay rate, total hours worked, gross pay, net pay, and tax withheld depending on the number of hours worked being greater than 40 and gross pay being greater than 1000.-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+</script>
+    <title>C2FCoverter-LeviLoera</title>
+  </head>
+  <body style = "background-color: #ff0000;">
+      <h1 style = "color: #FFFF33; text-align: center;">
+        <strong>
+          Welcome to the Pay Check<br>Program
+        <strong>
+       </h1>
+      <hr>
+      <script>
+      var sNam, nSsn, nPay, nHou, nNet, nGro, nTax, sDis;
+      sNam = parseFloat(window.prompt( " What is your name?", "a" ));
+      nSsn = parseInt(window.prompt("What is your Social Security number?","0"));
+      nPay = parseInt(window.prompt("What is your pay rate in $ per hours?","0"));
+      nHou = parseInt(window.prompt("How many total hours did you work this 			  week?","0"));
+      if( nHou > "40")
+      {
+      	nGro = 40 * nPay + (nHou - 40) * 1.5 * nPay;
+      }
+      else
+      {
+      	nGro = nHou * nPay;
+      }
+      if (nGro < "1000")
+      {
+      	nTax = nGro * .15
+      	nNet = nGro - nTax;
+      }
+      else
+      {
+      	nTax = nGro * .25;
+        nNet = nGro - nTax;
+      }
+      	sDis = new String("<center>" + sNam + "</center>");
+      	document.write((sDis.fontsize(6));
+		sDis = new String("<center>" + nSsn + "</center>");
+      	document.write((sDis.fontsize(6));
+        sDis = new String("<center>Hours Worked " + nHou + "</center>");
+      	document.write((sDis.fontsize(6));
+        sDis = new String("<center>Pay Rate " + nPay + "</center>");
+      	document.write((sDis.fontsize(6));
+        sDis = new String("<center> Gross Pay " + nGro + "</center>");
+      	document.write((sDis.fontsize(6));
+        sDis = new String("<center>Tax Withheld " + nTax + "</center>");
+      	document.write((sDis.fontsize(6));
+        sDis = new String("<center> Net Pay " + nNet + "</center>");
+      	document.write((sDis.fontsize(6));
+    </script>
+    <h3 style = "color: #FFFF33; text-align: center;">
+       <strong>
+         Reload page for another calculation.
+       <strong>
+     </h3>
+     <p>    
+       <h6 style = "color: #FFFF33; text-align: center;">
+        <strong>
+            By Levi Loera
+        </strong>
+       </h6>
+	 </p>
+    
+  </body>
+</html>
 
