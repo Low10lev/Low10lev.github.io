@@ -9,22 +9,22 @@ than 40 and gross pay being greater than 1000.-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
-</script>
+
     <title>C2FCoverter-LeviLoera</title>
   </head>
   <body style = "background-color: #ff0000;">
       <h1 style = "color: #FFFF33; text-align: center;">
         <strong>
           Welcome to the Pay Check<br>Program
-        <strong>
+        </strong>
        </h1>
       <hr>
       <script>
-      var sNam, nSsn, nPay, nHou, nNet, nGro, nTax, sDis;
-      sNam = parseFloat(window.prompt( " What is your name?", "a" ));
+      
+      sNam = parseFloat(window.prompt( "What is your name?", "a" ));
       nSsn = parseInt(window.prompt("What is your Social Security number?","0"));
       nPay = parseInt(window.prompt("What is your pay rate in $ per hours?","0"));
-      nHou = parseInt(window.prompt("How many total hours did you work this week?","0"));
+      nHou = parseInt(window.prompt("How many total hours did you work this 			  week?","0"));
       if( nHou > "40")
       {
       	nGro = 40 * nPay + (nHou - 40) * 1.5 * nPay;
@@ -34,9 +34,9 @@ than 40 and gross pay being greater than 1000.-->
       	nGro = nHou * nPay;
       }
       if (nGro < "1000")
-      {
-      	nTax = nGro * .15
-      	nNet = nGro - nTax;
+      {↩
+      	nTax = nGro * .15↩
+      	nNet = nGro - nTax;↩
       }
       else
       {
@@ -61,17 +61,15 @@ than 40 and gross pay being greater than 1000.-->
     <h3 style = "color: #FFFF33; text-align: center;">
        <strong>
          Reload page for another calculation.
-       <strong>
+       </strong>
      </h3>
-     <p>    
+        
        <h6 style = "color: #FFFF33; text-align: center;">
         <strong>
             By Levi Loera
         </strong>
        </h6>
-	 </p>
+	 
     
   </body>
 </html>
-
-
