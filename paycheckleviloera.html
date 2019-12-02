@@ -10,7 +10,7 @@ than 40 and gross pay being greater than 1000.-->
   <head>
     <meta charset="utf-8">
 
-    <title>C2FCoverter-LeviLoera</title>
+    <title>PayCheck-LeviLoera</title>
   </head>
   <body style = "background-color: #ff0000;">
       <h1 style = "color: #FFFF33; text-align: center;">
@@ -21,10 +21,10 @@ than 40 and gross pay being greater than 1000.-->
       <hr>
       <script>
       
-      sNam = parseFloat(window.prompt( "What is your name?", "a" ));
+      sNam = window.prompt( "What is your name?", "a" );
       nSsn = parseInt(window.prompt("What is your Social Security number?","0"));
       nPay = parseInt(window.prompt("What is your pay rate in $ per hours?","0"));
-      nHou = parseInt(window.prompt("How many total hours did you work this 			  week?","0"));
+      nHou = parseInt(window.prompt("How many total hours did you work this 			week?","0"));
       if( nHou > "40")
       {
       	nGro = 40 * nPay + (nHou - 40) * 1.5 * nPay;
@@ -34,9 +34,9 @@ than 40 and gross pay being greater than 1000.-->
       	nGro = nHou * nPay;
       }
       if (nGro < "1000")
-      {↩
-      	nTax = nGro * .15↩
-      	nNet = nGro - nTax;↩
+      {
+      	nTax = nGro * .15
+      	nNet = nGro - nTax;
       }
       else
       {
@@ -44,19 +44,19 @@ than 40 and gross pay being greater than 1000.-->
         nNet = nGro - nTax;
       }
       	sDis = new String("<center>" + sNam + "</center>");
-      	document.write((sDis.fontsize(6));
-		sDis = new String("<center>" + nSsn + "</center>");
-      	document.write((sDis.fontsize(6));
+      	document.write((sDis.fontsize(6)));
+		    sDis = new String("<center>Social Security " + nSsn + "</center>");
+      	document.write((sDis.fontsize(6)));
         sDis = new String("<center>Hours Worked " + nHou + "</center>");
-      	document.write((sDis.fontsize(6));
+      	document.write((sDis.fontsize(6)));
         sDis = new String("<center>Pay Rate " + nPay + "</center>");
-      	document.write((sDis.fontsize(6));
+      	document.write((sDis.fontsize(6)));
         sDis = new String("<center> Gross Pay " + nGro + "</center>");
-      	document.write((sDis.fontsize(6));
+      	document.write((sDis.fontsize(6)));
         sDis = new String("<center>Tax Withheld " + nTax + "</center>");
-      	document.write((sDis.fontsize(6));
+      	document.write((sDis.fontsize(6)));
         sDis = new String("<center> Net Pay " + nNet + "</center>");
-      	document.write((sDis.fontsize(6));
+      	document.write((sDis.fontsize(6)));
     </script>
     <h3 style = "color: #FFFF33; text-align: center;">
        <strong>
@@ -73,3 +73,4 @@ than 40 and gross pay being greater than 1000.-->
     
   </body>
 </html>
+
