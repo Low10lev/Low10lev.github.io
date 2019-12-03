@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+</script>
+<title>GuessingGame-LeviLoera</title>
 
+</head>
+<body style = "background-color: rgb(204, 0, 78);">
+    <h1 style = " text-align: center;">
+      <strong>
+        Welcome to the Guessing Game<br>Program
+      <strong>
+     </h1>
+    <p>
+      <h3 style = " text-align: center;">
+      <strong>
+          By Levi Loera
+      </strong>
+      </h3>
+    </p>
+    <hr>
+      <script>
+            var nCount, sSen;
+            var nRandom = (Math.floor(Math.random()*10));
+            
+           
+
+            for(nCount = 1; nCount < 5; nCount++)
+            {
+              var nEntry = parseInt(window.prompt("Guess between 0-9","0"));
+              if (nEntry == nRandom)
+              {
+                window.alert("You Win!!! The number was " + nRandom);
+                sSen = new String("<center>Attempt " + nCount + " : " + nEntry + "</center>");
+      	        document.write((sSen.fontcolor("White")).fontsize(5));
+                sSen = new String("<center>You Win!!! The number was " + nRandom + "</center>");
+                document.write((sSen.fontcolor("White")).fontsize(5));
+                break;
+              }
+              else if (nEntry > nRandom && nCount <= 3)
+              {
+                window.alert("TOO HIGH!!!");
+                sSen = new String("<center>Attempt " + nCount + " : " + nEntry + "</center>");
+                document.write((sSen.fontcolor("White")).fontsize(5));
+              }
+              
+              else if (nEntry < nRandom && nCount <= 3)
+              {
+                window.alert("TOO LOW!!!");
+                sSen = new String("<center>Attempt " + nCount + " : " + nEntry + "</center>");
+                document.write((sSen.fontcolor("White")).fontsize(5));
+              }
+              else if (nEntry != nRandom && nCount == 4)
+              {
+              if (nEntry > nRandom)
+              {
+              	window.alert("TOO HIGH!!!");
+                sSen = new String("<center>Attempt " + nCount + " : " + nEntry + "</center>");
+                document.write((sSen.fontcolor("White")).fontsize(5));
+                
+              }
+              else
+              {
+              	window.alert("TOO LOW!!!");
+                sSen = new String("<center>Attempt " + nCount + " : " + nEntry + "</center>");
+                document.write((sSen.fontcolor("White")).fontsize(5));
+              }
+                sSen = new String("<center>You Lose. The number was " + nRandom + "</center>");
+                document.write((sSen.fontcolor("White")).fontsize(5));
+                break;
+              }
+      
+            }
+            
+      </script>
+        <h3 style = " text-align: center;">
+            <strong>
+                Reload page for another conversion.
+            <strong>
+        </h3>
+  </body>
+</html>
