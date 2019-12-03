@@ -11,6 +11,18 @@ and lists the ages with the average total and displays it.-->
 </head>
 <body style = "background-color: #CC00CC;">
     <h1 style = " text-align: center;">
+<!--This program displays a webpage with a promt on entering the age of any number of people
+and lists the ages with the average total and displays it.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+</script>
+<title>AverageAge-LeviLoera</title>
+</head>
+<body style = "background-color: #CC00CC;">
+    <h1 style = " text-align: center;">
       <strong>
         Welcome to the Average Age<br>Program
       <strong>
@@ -33,6 +45,10 @@ and lists the ages with the average total and displays it.-->
                 document.write("<h2><center>Age " + nCou + " is " + nEnt + "<br></h2></center>");
                 nEnt = parseFloat(window.prompt("Enter the Age (-1 to end)","0"));
 
+            }
+            if (nEnt < 0)
+            {
+            	window.alert("Age cannot be NEGATIVE!Reload Page");
             }
             document.write("<h1><center>The Average Age is "
             + Math.floor(nMath/nCou) +"</h1></center>");
