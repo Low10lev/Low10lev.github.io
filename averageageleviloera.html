@@ -1,1 +1,46 @@
 
+<!--This program displays a webpage with a promt on entering the age of any number of people
+and lists the ages with the average total and displays it.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+</script>
+<title>AverageAge-LeviLoera</title>
+</head>
+<body style = "background-color: #CC00CC;">
+    <h1 style = " text-align: center;">
+      <strong>
+        Welcome to the Average Age<br>Program
+      <strong>
+     </h1>
+    <p>
+      <h3 style = " text-align: center;">
+      <strong>
+          By Levi Loera
+      </strong>
+      </h3>
+    </p>
+    <hr>
+      <script>
+            var nEnt, nMath = 0, nNum, nCou = 0, sSen;
+            nEnt = parseInt(window.prompt("Enter the Age (-1 to end)","0"));
+            while (nEnt >= 0)
+            {
+                nMath = nMath + nEnt;
+                nCou = nCou + 1;
+                document.write("<h2><center>Age " + nCou + " is " + nEnt + "<br></h2></center>");
+                nEnt = parseFloat(window.prompt("Enter the Age (-1 to end)","0"));
+
+            }
+            document.write("<h1><center>The Average Age is "
+            + Math.floor(nMath/nCou) +"</h1></center>");
+      </script>
+        <h3 style = " text-align: center;">
+            <strong>
+                Reload page for another conversion.
+            <strong>
+        </h3>
+  </body>
+</html>
