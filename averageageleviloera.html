@@ -46,9 +46,9 @@ and lists the ages with the average total and displays it.-->
                 nEnt = parseFloat(window.prompt("Enter the Age (-1 to end)","0"));
 
             }
-            if (nEnt < 0)
+            if (nEnt < -1)
             {
-            	window.alert("Age cannot be NEGATIVE!Reload Page");
+            	window.alert("Age cannot be NEGATIVE! Reload Page");
             }
             document.write("<h1><center>The Average Age is "
             + Math.floor(nMath/nCou) +"</h1></center>");
