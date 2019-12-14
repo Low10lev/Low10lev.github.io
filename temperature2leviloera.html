@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+</script>
+    <title>Temperature2-LeviLoera</title>
+  </head>
+  <body style = "background-color: #0000ff;">
+      <h1 style = "color: #FFFF33; text-align: center;">
+        <strong>
+          Welcome to the Temperature<br> Conversion Program
+        <strong>
+       </h1>
+      <p>
+        <h3 style = "color: #FFFF33; text-align: center;">
+        <strong>
+            By Levi Loera
+        </strong>
+        </h3>
+      </p>
+      <hr>
+      <p id="demo1"></p>
+      <p id="demo2"></p>
+      <script>
+      var Input;
+      while(true)
+      {
+          Input = window.prompt("Converting from:[C]=Celsius or [F]=Fahrenheit(Q=Quit)");
+          if(Input == "Q")
+          {
+            break;
+          }
+          else if(Input == "F")
+          {
+          	var nNum, x ;
+          	nNum = parseFloat(window.prompt("Enter the degrees: ", "0"));
+document.getElementById("demo2").innerHTML = "<h2><center>" + nNum + " Fahrenheit equals " + FtoC(nNum) +" Celsius.</h2></center>";
 
+            break;
+          }
+          else if (Input == "C")
+          {
+          	var nNum;
+          	nNum = parseFloat(window.prompt("Enter the degrees: ", "0"));
+         	 document.getElementById("demo1").innerHTML = "<h2><center>" + nNum + " Celsius equals " + CtoF(nNum); +" Fahrenheit.</h2></center>";
+
+            break;
+          }
+          else
+          window.alert("You must enter either F,C or Q!");
+      }
+      function CtoF(C)
+  	  {
+ 		    return C * 1.8 + 32;
+      }
+      function FtoC(F)
+      {		
+        return(F - 32) * 1.8 ;
+      }
+    </script>
+    <h3 style = "color: #FFFF33; text-align: center;">
+       <strong>
+         Reload page for another conversion.
+       <strong>
+     </h3>
+    
+  </body>
+</html>
