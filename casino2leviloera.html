@@ -1,1 +1,146 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+</script>
+    <title>Casino-LeviLoera</title>
+  </head>
+  <body style = "background-color: #00FFFF;">
+      <script>
+
+        sSen = new String("<center> Imperial Pacific Casino</center>");
+      	document.write((sSen.fontcolor("Yellow")).fontsize(8));
+        sSen = new String("<center>Levi Loera</center>");
+      	document.write((sSen.fontcolor("Yellow")).fontsize(6));
+        sSen = new String("<center>Price of Chips</center>");
+      	document.write((sSen.fontcolor("White")).fontsize(6));
+        sSen = new String("<center>Black = $5</center>");
+      	document.write((sSen.fontcolor("Black")).fontsize(5));
+        sSen = new String("<center>Blue = $20</center>");
+      	document.write((sSen.fontcolor("Blue")).fontsize(5));
+        sSen = new String("<center>Red = $50</center>");
+      	document.write((sSen.fontcolor("Red")).fontsize(5));
+        sSen = new String("<center>Green = $100</center>");
+      	document.write((sSen.fontcolor("Green")).fontsize(5));
+        sSen = new String("<center>Gold = $500</center>");
+        document.write((sSen.fontcolor("Gold")).fontsize(5));
+        sSen = new String("<center>----Your Purchase-----</center>");
+      	document.write((sSen.fontcolor("Black")).fontsize(6));
+        
+        var Chips = ["BLACK","BLUE","RED","GREEN","GOLD"]; 
+        var ChipQuantity = new Array();
+        var ChipValue = [5,20,50,100,500];
+        var ChipCost = [];
+        var ChipTotal = 0;
+        var a = 0;
+        var Winnings = 0;
+        var RT = 0;
+        var CashOut = 0;
+        var t = 0;
+
+        do
+        {
+        
+          Ent = window.prompt( "How many " + Chips[a] + " chips did you purchase?","0");
+          ChipQuantity[a] = (Ent);
+          ChipCost[a] = ChipQuantity[a] * ChipValue[a];
+          ChipTotal += ChipCost[a];
+          sSen = new String("<center>"+ ChipQuantity[a] + " " + Chips[a] + " Chips = $" + ChipCost[a] + "				</center>");
+          document.write((sSen.fontcolor("Black")).fontsize(5));
+          a++;
+        }while (a < Chips.length)
+
+        sSen = new String("<center>Your total is $" + ChipTotal + "</center>");
+      	document.write((sSen.fontcolor("Black")).fontsize(6));
+        
+        sSen = new String("<center>-----Your Receipts----</center>");
+      	document.write((sSen.fontcolor("Blue")).fontsize(6));
+        Winnings = ChipTotal - Receipts(RT);  
+   
+        if (Winnings > 0)
+        {
+        	sSen = new String("<center>-----You Won $" + Winnings + " : )----</center>");
+        	document.write((sSen.fontcolor("Green")).fontsize(6));
+          sSen = new String("<center>-----Your Tax Withholdings----</center>");
+      	  document.write((sSen.fontcolor("Red")).fontsize(6));
+          Residence(Winnings);
+          CashOut = ChipTotal - t;
+          sSen = new String("<center>----Cash Out $" + CashOut + "----</center>");
+        	document.write((sSen.fontcolor("Yellow")).fontsize(6));
+        }
+        else
+        {
+        	sSen = new String("<center>----You Lost : ( " + Winnings + "----</center>");
+        	document.write((sSen.fontcolor("Green")).fontsize(6));
+          CashOut = ChipTotal - t;
+          sSen = new String("<center>----Cash Out $" + CashOut + "----</center>");
+        	document.write((sSen.fontcolor("Yellow")).fontsize(6));
+         	
+        }
+
+        sSen = new String("<center>Thank You!!!</center>");
+        document.write((sSen.fontcolor("Black")).fontsize(6));
+        
+        function Residence (w)
+        {
+        	var sSen;
+          var Tax = 0;
+    
+          sEnt = window.prompt( "Do you live in [US]=United States, [G]=Guam, [C]=CNMI, or [N]=None?","N");
+          while (true)
+          {
+            if (sEnt == "N")
+            {
+              sSen = new String("<center> Foreign Residents will have 0% withholding tax on winning.</center>");
+              document.write((sSen.fontcolor("Red")).fontsize(5));
+              t = Tax;
+              break;
+            }
+            else if (sEnt == "US" || sEnt == "G")
+            {
+              Tax = w * .2;
+              sSen = new String("<center>  U.S. & Guam Residents will have 20% withholding tax on winning.<br> $" + Tax + "</center>");
+              document.write((sSen.fontcolor("Red")).fontsize(5));
+              t = Tax;
+              break;
+            }
+            else
+            {
+              Tax  = w * .1;
+              sSen = new String("<center>  CNMI Residents will have 10% withholding tax on winning.<br> $" + Tax + "</center>");
+              document.write((sSen.fontcolor("Red")).fontsize(5));
+              t = Tax;
+              break;
+            }
+          }
+        }
+
+        sSen = new String("<center>Your Withheld Tax is $" + Tax + "</center>");
+        document.write((sSen.fontcolor("Black")).fontsize(6));
+        
+        function Receipts (ReceiptTotal)
+        {
+          var ReceiptValue, Count=0, ReceiptTotal = 0;
+          do
+          {
+            ReceiptValue = parseInt(window.prompt("Enter Receipt Value or [Q]=quit","Q"));
+            if(isNaN(ReceiptValue)); 
+            else
+            {
+              ReceiptTotal += ReceiptValue;
+              Count++;
+              sSen = new String("<center>Receipt " + Count+" = $" + ReceiptValue + "</center>");
+              document.write((sSen.fontcolor("Blue")).fontsize(5));
+             
+            }
+            
+          }while(!isNaN(ReceiptValue));
+          
+          sSen = new String(("<center>Your Receipt Total is $" + ReceiptTotal + "</center>"));
+          document.write((sSen.fontcolor("Blue")).fontsize(6));
+          return ReceiptTotal;
+        }
+      </script>
+ </body>
+</html>
